@@ -10,7 +10,8 @@ const Form = (props) => {
         e.preventDefault();
         console.log(category + ":" + id);
         history.push(`/${category}/${id}`)
-
+        // setCategory("");
+        // setId("");
     };
 
     return (

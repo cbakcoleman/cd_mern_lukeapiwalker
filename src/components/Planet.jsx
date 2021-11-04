@@ -19,11 +19,13 @@ const Planet = (props) => {
             console.log(error);
             setPlanets({error: "These aren't the droids you're looking for..."})
         })
-    }, []);
+    }, [input1]);
 
     return (
         planets.error ?
-        <p>{planets.error}</p> :
+        <p>{planets.error} <br/>
+            <img src="https://placekeanu.com/150/200" alt="Obi Wan" />
+        </p> :
         <div>
             <h1>{planets.name}</h1>
             <p>Climate: {planets.climate}</p>
