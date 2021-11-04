@@ -4,11 +4,14 @@ import {Route, Switch} from 'react-router-dom';
 SEE INDEX.JS FOR BROWSER ROUTER*/
 import Planet from './components/Planet';
 import People from './components/People';
+import Form from './components/Form';
+
 
 function App() {
   return (
     <div className="App">
-      <h4>These aren't the droids you're looking for:</h4>
+      <h4>Use the Schwarz =></h4>
+      <Form/>
       {/*ANYTHING OUTSIDE OF SWITCH WILL ALWAYS SHOW*/}
       <switch>
       {/*PUT COMPONENT IN ROUTE IN SWITCH SO ONLY SHOWS WHEN PATH USED*/}

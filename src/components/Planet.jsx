@@ -3,27 +3,27 @@ import React, { useEffect, useState } from 'react'
 import {useParams} from 'react-router';
 
 const Planet = (props) => {
+    // CREATE STATE VARIABLE
     const [planets, setPlanets] = useState([])
+    // THIS IS DESTRUCTURING INPUT MAYBE??
     const {input1} = useParams();
 
+    // USEEFFECT TO RUN ON FIRST RENDER INSTEAD OF NEEDING TO CLICK A BUTTON
     useEffect( () => {
         axios.get(`https://swapi.dev/api/planets/${input1}`)
         .then(response => {
             console.log(response.data);
             setPlanets(response.data)
         })
-        .catch(error => console.log(error))
+        .catch(error => {
+            console.log(error);
+            setPlanets({error: "These aren't the droids you're looking for..."})
+        })
     }, []);
 
-    // const retrievePlanet = () => {
-    //     axios.get("https://swapi.dev/api/planets/{input1}")
-    //     .then(jsonResult => {
-    //         console.log(jsonResult.data)
-    //         setPlanets(jsonResult.data)
-    //     })
-    //     .catch(error => console.log(error))
-    // }
     return (
+        planets.error ?
+        <p>{planets.error}</p> :
         <div>
             <h1>{planets.name}</h1>
             <p>Climate: {planets.climate}</p>
