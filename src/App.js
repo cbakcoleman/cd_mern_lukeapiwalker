@@ -1,23 +1,19 @@
-import logo from './logo.svg';
 import './App.css';
+import {Route, Switch} from 'react-router-dom';
+/* IMPORT LINK, ROUTE, & || SWITCH FROM REACT ROUTER DOM
+SEE INDEX.JS FOR BROWSER ROUTER*/
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <h4>These aren't the droids you're looking for:</h4>
+      {/*ANYTHING OUTSIDE OF SWITCH WILL ALWAYS SHOW*/}
+      <switch>
+      {/*PUT COMPONENT IN ROUTE IN SWITCH SO ONLY SHOWS WHEN PATH USED*/}
+        <Route path ='/planets/:input1'>
+          <Planet/>
+        </Route>
+      </switch>
     </div>
   );
 }
