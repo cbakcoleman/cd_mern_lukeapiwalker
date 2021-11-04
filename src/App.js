@@ -2,6 +2,7 @@ import './App.css';
 import {Route, Switch} from 'react-router-dom';
 /* IMPORT LINK, ROUTE, & || SWITCH FROM REACT ROUTER DOM
 SEE INDEX.JS FOR BROWSER ROUTER*/
+import Planet from './components/Planet';
 
 function App() {
   return (
