@@ -25,13 +25,11 @@ const Planet = (props) => {
     // }
     return (
         <div>
-            <div>
-                <h1>{planets.name}</h1>
-                <p>Climate: {planets.climate}</p>
-                <p>Terrain: {planets.terrain}</p>
-                <p>Surface Water: {}</p>
-                <p>Populattion: {planets.population}</p>
-            </div>
+            <h1>{planets.name}</h1>
+            <p>Climate: {planets.climate}</p>
+            <p>Terrain: {planets.terrain}</p>
+            <p>Surface Water: {}</p>
+            <p>Populattion: {planets.population}</p>
         </div>
     )
 }
